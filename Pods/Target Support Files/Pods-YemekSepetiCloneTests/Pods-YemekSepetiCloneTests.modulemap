@@ -1,0 +1,6 @@
+framework module Pods_YemekSepetiCloneTests {
+  umbrella header "Pods-YemekSepetiCloneTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

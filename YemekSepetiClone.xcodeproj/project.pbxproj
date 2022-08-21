@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EE23B825BB9BFE734E0F9EE /* Pods_YemekSepetiCloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442536810DC2354592454B4B /* Pods_YemekSepetiCloneTests.framework */; };
+		C3DAAB1C28B22467007D75DF /* DishDisplayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DAAB1A28B22467007D75DF /* DishDisplayCollectionViewCell.swift */; };
+		C3DAAB1D28B22467007D75DF /* DishDisplayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DAAB1B28B22467007D75DF /* DishDisplayCollectionViewCell.xib */; };
+		C3DAAB1F28B22758007D75DF /* DishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DAAB1E28B22758007D75DF /* DishModel.swift */; };
+		C3DAAB2328B23285007D75DF /* DishLandscapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DAAB2128B23285007D75DF /* DishLandscapeCollectionViewCell.swift */; };
+		C3DAAB2428B23285007D75DF /* DishLandscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DAAB2228B23285007D75DF /* DishLandscapeCollectionViewCell.xib */; };
 		C3DBECE928AFFE3E00886091 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBECE828AFFE3E00886091 /* AppDelegate.swift */; };
 		C3DBECEB28AFFE3E00886091 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBECEA28AFFE3E00886091 /* SceneDelegate.swift */; };
 		C3DBECF028AFFE3E00886091 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DBECEE28AFFE3E00886091 /* Main.storyboard */; };
@@ -19,6 +25,11 @@
 		C3DBED2728B0417D00886091 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBED2628B0417D00886091 /* HomeViewController.swift */; };
 		C3DBED2C28B0501E00886091 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBED2A28B0501D00886091 /* CategoryCollectionViewCell.swift */; };
 		C3DBED2D28B0501E00886091 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DBED2B28B0501E00886091 /* CategoryCollectionViewCell.xib */; };
+		C3DBED2F28B0539500886091 /* DishCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBED2E28B0539500886091 /* DishCategory.swift */; };
+		C3DBED3128B0557C00886091 /* String Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBED3028B0557C00886091 /* String Extensions.swift */; };
+		C3DBED3428B05B1300886091 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBED3328B05B1300886091 /* CardView.swift */; };
+		CC4A6AF0BC79A0CA072A05E7 /* Pods_YemekSepetiClone_YemekSepetiCloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA99A16730D83C40C6AED111 /* Pods_YemekSepetiClone_YemekSepetiCloneUITests.framework */; };
+		DF244CE119450087CBDBA347 /* Pods_YemekSepetiClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D99E3FA5FB5E516313172C /* Pods_YemekSepetiClone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +50,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13D99E3FA5FB5E516313172C /* Pods_YemekSepetiClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YemekSepetiClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C3824EEBD9D3A7AF4EB2C02 /* Pods-YemekSepetiCloneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YemekSepetiCloneTests.release.xcconfig"; path = "Target Support Files/Pods-YemekSepetiCloneTests/Pods-YemekSepetiCloneTests.release.xcconfig"; sourceTree = "<group>"; };
+		442536810DC2354592454B4B /* Pods_YemekSepetiCloneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YemekSepetiCloneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74E8CADCD3C53FC0AE537651 /* Pods-YemekSepetiClone-YemekSepetiCloneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YemekSepetiClone-YemekSepetiCloneUITests.release.xcconfig"; path = "Target Support Files/Pods-YemekSepetiClone-YemekSepetiCloneUITests/Pods-YemekSepetiClone-YemekSepetiCloneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B83CFC0B4AAFB34276604B28 /* Pods-YemekSepetiClone-YemekSepetiCloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YemekSepetiClone-YemekSepetiCloneUITests.debug.xcconfig"; path = "Target Support Files/Pods-YemekSepetiClone-YemekSepetiCloneUITests/Pods-YemekSepetiClone-YemekSepetiCloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C3DAAB1A28B22467007D75DF /* DishDisplayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDisplayCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3DAAB1B28B22467007D75DF /* DishDisplayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishDisplayCollectionViewCell.xib; sourceTree = "<group>"; };
+		C3DAAB1E28B22758007D75DF /* DishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishModel.swift; sourceTree = "<group>"; };
+		C3DAAB2128B23285007D75DF /* DishLandscapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishLandscapeCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3DAAB2228B23285007D75DF /* DishLandscapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishLandscapeCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3DBECE528AFFE3E00886091 /* YemekSepetiClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YemekSepetiClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3DBECE828AFFE3E00886091 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3DBECEA28AFFE3E00886091 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +76,13 @@
 		C3DBED2628B0417D00886091 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C3DBED2A28B0501D00886091 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3DBED2B28B0501E00886091 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		C3DBED2E28B0539500886091 /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
+		C3DBED3028B0557C00886091 /* String Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String Extensions.swift"; sourceTree = "<group>"; };
+		C3DBED3328B05B1300886091 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D24E9F313D19988CDAEA0513 /* Pods-YemekSepetiCloneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YemekSepetiCloneTests.debug.xcconfig"; path = "Target Support Files/Pods-YemekSepetiCloneTests/Pods-YemekSepetiCloneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA94554E3A0E63383FFF55A5 /* Pods-YemekSepetiClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YemekSepetiClone.debug.xcconfig"; path = "Target Support Files/Pods-YemekSepetiClone/Pods-YemekSepetiClone.debug.xcconfig"; sourceTree = "<group>"; };
+		E42D865ECDFC7AB7E23EA767 /* Pods-YemekSepetiClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YemekSepetiClone.release.xcconfig"; path = "Target Support Files/Pods-YemekSepetiClone/Pods-YemekSepetiClone.release.xcconfig"; sourceTree = "<group>"; };
+		FA99A16730D83C40C6AED111 /* Pods_YemekSepetiClone_YemekSepetiCloneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YemekSepetiClone_YemekSepetiCloneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF244CE119450087CBDBA347 /* Pods_YemekSepetiClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE23B825BB9BFE734E0F9EE /* Pods_YemekSepetiCloneTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,17 +106,68 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC4A6AF0BC79A0CA072A05E7 /* Pods_YemekSepetiClone_YemekSepetiCloneUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		039FE3A6A52126298A1C1B87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13D99E3FA5FB5E516313172C /* Pods_YemekSepetiClone.framework */,
+				FA99A16730D83C40C6AED111 /* Pods_YemekSepetiClone_YemekSepetiCloneUITests.framework */,
+				442536810DC2354592454B4B /* Pods_YemekSepetiCloneTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A5B7A7FB41DF54946B0D256 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA94554E3A0E63383FFF55A5 /* Pods-YemekSepetiClone.debug.xcconfig */,
+				E42D865ECDFC7AB7E23EA767 /* Pods-YemekSepetiClone.release.xcconfig */,
+				B83CFC0B4AAFB34276604B28 /* Pods-YemekSepetiClone-YemekSepetiCloneUITests.debug.xcconfig */,
+				74E8CADCD3C53FC0AE537651 /* Pods-YemekSepetiClone-YemekSepetiCloneUITests.release.xcconfig */,
+				D24E9F313D19988CDAEA0513 /* Pods-YemekSepetiCloneTests.debug.xcconfig */,
+				2C3824EEBD9D3A7AF4EB2C02 /* Pods-YemekSepetiCloneTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C3DAAB1728B223E5007D75DF /* DishDisplayCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3DAAB1A28B22467007D75DF /* DishDisplayCollectionViewCell.swift */,
+				C3DAAB1B28B22467007D75DF /* DishDisplayCollectionViewCell.xib */,
+			);
+			path = DishDisplayCollectionCell;
+			sourceTree = "<group>";
+		};
+		C3DAAB2028B23253007D75DF /* DishLandscape */ = {
+			isa = PBXGroup;
+			children = (
+				C3DAAB2128B23285007D75DF /* DishLandscapeCollectionViewCell.swift */,
+				C3DAAB2228B23285007D75DF /* DishLandscapeCollectionViewCell.xib */,
+			);
+			path = DishLandscape;
+			sourceTree = "<group>";
+		};
+		C3DAAB2528B27C46007D75DF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		C3DBECDC28AFFE3E00886091 = {
 			isa = PBXGroup;
 			children = (
 				C3DBECE728AFFE3E00886091 /* YemekSepetiClone */,
 				C3DBECE628AFFE3E00886091 /* Products */,
+				0A5B7A7FB41DF54946B0D256 /* Pods */,
+				039FE3A6A52126298A1C1B87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				C3DBED2128B0295E00886091 /* OnboardingSlide.swift */,
+				C3DBED2E28B0539500886091 /* DishCategory.swift */,
+				C3DAAB1E28B22758007D75DF /* DishModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -128,6 +211,7 @@
 		C3DBED1928B0007C00886091 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C3DAAB2528B27C46007D75DF /* Detail */,
 				C3DBED2528B0416400886091 /* Home */,
 				C3DBED1B28B000E800886091 /* Onboarding */,
 			);
@@ -137,6 +221,7 @@
 		C3DBED1A28B0008B00886091 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				C3DBED3228B05AFC00886091 /* CardView */,
 				C3DBED2828B04FE000886091 /* CollectionViewCells */,
 			);
 			path = CustomViews;
@@ -155,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				C3DBED1F28B0256500886091 /* UIView + Extension.swift */,
+				C3DBED3028B0557C00886091 /* String Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -170,6 +256,8 @@
 		C3DBED2828B04FE000886091 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C3DAAB2028B23253007D75DF /* DishLandscape */,
+				C3DAAB1728B223E5007D75DF /* DishDisplayCollectionCell */,
 				C3DBED2928B04FEC00886091 /* CategoryCollectionViewcell */,
 			);
 			path = CollectionViewCells;
@@ -184,6 +272,14 @@
 			path = CategoryCollectionViewcell;
 			sourceTree = "<group>";
 		};
+		C3DBED3228B05AFC00886091 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				C3DBED3328B05B1300886091 /* CardView.swift */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,9 +287,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3DBED0F28AFFE3F00886091 /* Build configuration list for PBXNativeTarget "YemekSepetiClone" */;
 			buildPhases = (
+				36EF4830C2AFCE93A2BE6C19 /* [CP] Check Pods Manifest.lock */,
 				C3DBECE128AFFE3E00886091 /* Sources */,
 				C3DBECE228AFFE3E00886091 /* Frameworks */,
 				C3DBECE328AFFE3E00886091 /* Resources */,
+				863A2D5BA079A78E87560C9E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,6 +306,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3DBED1228AFFE3F00886091 /* Build configuration list for PBXNativeTarget "YemekSepetiCloneTests" */;
 			buildPhases = (
+				5F512A79C10EF4BC2D2AD35F /* [CP] Check Pods Manifest.lock */,
 				C3DBECF728AFFE3F00886091 /* Sources */,
 				C3DBECF828AFFE3F00886091 /* Frameworks */,
 				C3DBECF928AFFE3F00886091 /* Resources */,
@@ -226,9 +325,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3DBED1528AFFE3F00886091 /* Build configuration list for PBXNativeTarget "YemekSepetiCloneUITests" */;
 			buildPhases = (
+				54FD3E71C967251C203499A6 /* [CP] Check Pods Manifest.lock */,
 				C3DBED0128AFFE3F00886091 /* Sources */,
 				C3DBED0228AFFE3F00886091 /* Frameworks */,
 				C3DBED0328AFFE3F00886091 /* Resources */,
+				DBD92FC11520D6C9EEFFF867 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,9 +389,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3DAAB1D28B22467007D75DF /* DishDisplayCollectionViewCell.xib in Resources */,
 				C3DBED2D28B0501E00886091 /* CategoryCollectionViewCell.xib in Resources */,
 				C3DBECF528AFFE3F00886091 /* LaunchScreen.storyboard in Resources */,
 				C3DBECF228AFFE3F00886091 /* Assets.xcassets in Resources */,
+				C3DAAB2428B23285007D75DF /* DishLandscapeCollectionViewCell.xib in Resources */,
 				C3DBECF028AFFE3E00886091 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +414,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36EF4830C2AFCE93A2BE6C19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YemekSepetiClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54FD3E71C967251C203499A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YemekSepetiClone-YemekSepetiCloneUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F512A79C10EF4BC2D2AD35F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YemekSepetiCloneTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		863A2D5BA079A78E87560C9E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YemekSepetiClone/Pods-YemekSepetiClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YemekSepetiClone/Pods-YemekSepetiClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YemekSepetiClone/Pods-YemekSepetiClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBD92FC11520D6C9EEFFF867 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YemekSepetiClone-YemekSepetiCloneUITests/Pods-YemekSepetiClone-YemekSepetiCloneUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YemekSepetiClone-YemekSepetiCloneUITests/Pods-YemekSepetiClone-YemekSepetiCloneUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YemekSepetiClone-YemekSepetiCloneUITests/Pods-YemekSepetiClone-YemekSepetiCloneUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C3DBECE128AFFE3E00886091 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -321,9 +527,15 @@
 				C3DBED2028B0256500886091 /* UIView + Extension.swift in Sources */,
 				C3DBECE928AFFE3E00886091 /* AppDelegate.swift in Sources */,
 				C3DBECEB28AFFE3E00886091 /* SceneDelegate.swift in Sources */,
+				C3DBED3128B0557C00886091 /* String Extensions.swift in Sources */,
 				C3DBED1D28B0011300886091 /* OnboardingViewController.swift in Sources */,
 				C3DBED2728B0417D00886091 /* HomeViewController.swift in Sources */,
+				C3DAAB2328B23285007D75DF /* DishLandscapeCollectionViewCell.swift in Sources */,
+				C3DBED2F28B0539500886091 /* DishCategory.swift in Sources */,
+				C3DAAB1F28B22758007D75DF /* DishModel.swift in Sources */,
+				C3DBED3428B05B1300886091 /* CardView.swift in Sources */,
 				C3DBED2428B02D8100886091 /* OnboardingCollectionViewCell.swift in Sources */,
+				C3DAAB1C28B22467007D75DF /* DishDisplayCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +704,7 @@
 		};
 		C3DBED1028AFFE3F00886091 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA94554E3A0E63383FFF55A5 /* Pods-YemekSepetiClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -521,6 +734,7 @@
 		};
 		C3DBED1128AFFE3F00886091 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E42D865ECDFC7AB7E23EA767 /* Pods-YemekSepetiClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -550,6 +764,7 @@
 		};
 		C3DBED1328AFFE3F00886091 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D24E9F313D19988CDAEA0513 /* Pods-YemekSepetiCloneTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -570,6 +785,7 @@
 		};
 		C3DBED1428AFFE3F00886091 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C3824EEBD9D3A7AF4EB2C02 /* Pods-YemekSepetiCloneTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -590,6 +806,7 @@
 		};
 		C3DBED1628AFFE3F00886091 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83CFC0B4AAFB34276604B28 /* Pods-YemekSepetiClone-YemekSepetiCloneUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -608,6 +825,7 @@
 		};
 		C3DBED1728AFFE3F00886091 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74E8CADCD3C53FC0AE537651 /* Pods-YemekSepetiClone-YemekSepetiCloneUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
