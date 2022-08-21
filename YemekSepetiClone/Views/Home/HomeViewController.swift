@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
     var populars: [Dish] = [
         .init(id: "id", name: "Erdem Lok", description: "Gördüğü en iyisi", image: "https://picsum.photos/100/200", calories: 21),
         .init(id: "id2", name: "ad Lok", description: "sda", image: "https://picsum.photos/100/200", calories: 312),
-        .init(id: "id3", name: "eren Lok", description: "baya en iyisi", image: "https://picsum.photos/100/200", calories: 321),
+        .init(id: "id3", name: "eren Lok", description: "baya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisi", image: "https://picsum.photos/100/200", calories: 321),
     
     ]
     
@@ -105,5 +105,19 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
     }
    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == foodCollectionView {
+            let controller = ListDishesViewController.instantiate()
+            controller.category = categories[indexPath.row]
+            navigationController?.pushViewController(controller, animated: true)
+        } else {
+            let controller = DetailsViewController.instantiate()
+            
+            controller.dish = collectionView == popularCollectionView ? populars[indexPath.row] : chef[indexPath.row]
+            
+            navigationController?.present(controller, animated: true, completion: nil)
+            
+        }
+    }
     
 }
