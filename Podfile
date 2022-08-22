@@ -8,6 +8,9 @@ target 'YemekSepetiClone' do
   # Pods for YemekSepetiClone
 
 pod 'Kingfisher', '~> 7.0'
+pod 'ProgressHUD'
+
+
   target 'YemekSepetiCloneTests' do
     inherit! :search_paths
     # Pods for testing

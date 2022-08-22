@@ -6,18 +6,12 @@
 //
 
 import UIKit
-
+import ProgressHUD
 class ListDishesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var category : DishCategory!
-    var dishes: [Dish] = [
-        .init(id: "id", name: "Erdem Lok", description: "Gördüğü en iyisi", image: "https://picsum.photos/100/200", calories: 21),
-        .init(id: "id2", name: "ad Lok", description: "sda", image: "https://picsum.photos/100/200", calories: 312),
-        .init(id: "id3", name: "eren Lok", description: "baya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisi", image: "https://picsum.photos/100/200", calories: 321),
-    
-    
-    ]
+    var dishes: [Dish] = []
     
   
     
@@ -25,6 +19,18 @@ class ListDishesViewController: UIViewController {
         super.viewDidLoad()
         title = category.name
         registerCell()
+        ProgressHUD.show()
+        Networkservice.shared.fetchCategoryDishes(categoryId: category.id ?? "") { [weak self] (result) in
+            switch result {
+            case .success(let dishes):
+                ProgressHUD.dismiss()
+                self?.dishes = dishes
+                self?.tableView.reloadData()
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            
+            }
+        }
     }
     
     func registerCell() {

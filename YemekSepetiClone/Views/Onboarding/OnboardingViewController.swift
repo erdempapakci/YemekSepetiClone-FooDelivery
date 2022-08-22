@@ -19,7 +19,14 @@ class OnboardingViewController: UIViewController {
             didSet {
                 pageControl.currentPage = currentPage
                 if currentPage == slides.count - 1 {
-                    nextButtonClicked.setTitle("Get Started", for: .normal)
+                    
+                    let button = UIButton(frame: CGRect(x: 132, y: 650, width: 125, height: 50))
+                    button.setTitle("Sign Up", for: .normal)
+                    button.backgroundColor = .systemGreen
+                    view.addSubview(button)
+                    button.layer.cornerRadius = 10
+                    nextButtonClicked.backgroundColor = .systemGreen
+                    nextButtonClicked.setTitle("Sign In", for: .normal)
                 } else {
                     nextButtonClicked.setTitle("Next", for: .normal)
                 }
@@ -29,13 +36,17 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
    
         super.viewDidLoad()
+        
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         
+       
         slides = [
             onboardingSlide(title: "All kinds of food", description: "Selected dishes from world cuisine", image: UIImage(named: "1")!),
             onboardingSlide(title: "Dishes you can customize", description: "You can choose what your meal includes", image: UIImage(named: "2")!),
-            onboardingSlide(title: "Let's bring it to your location", description: "Your delivery is ready in minutese", image: UIImage(named: "3")!)
+            onboardingSlide(title: "Let's bring it to your location", description: "Your delivery is ready in minutese", image: UIImage(named: "3")!),
+            onboardingSlide(title: "Let's bring it to your location", description: "Your delivery is ready in minutese", image: UIImage(named: "4")!)
         
         ]
         
@@ -53,8 +64,9 @@ class OnboardingViewController: UIViewController {
         } else {
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)
+            
             collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-            print("so")
+            
         }
       
     }

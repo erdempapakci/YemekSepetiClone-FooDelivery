@@ -6,46 +6,59 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class HomeViewController: UIViewController {
-
+    @IBOutlet weak var searchBar: UISearchBar!
+   
+    
     @IBOutlet weak var foodCollectionView: UICollectionView!
    
     @IBOutlet weak var chefsBestCollection: UICollectionView!
     @IBOutlet weak var popularCollectionView: UICollectionView!
-    var categories: [DishCategory] = [
-        .init(id: "id", name: "Turkish Dish", image: "https://picsum.photos/100/200"),
-        .init(id: "id", name: "Korea Dish", image: "https://picsum.photos/100/200"),
-        .init(id: "id", name: "Greece Dish", image: "https://picsum.photos/100/200"),
-        .init(id: "id", name: "Poland Dish", image: "https://picsum.photos/100/200"),
-        .init(id: "id", name: "Russia Dish", image: "https://picsum.photos/100/200")
-    ]
-    var populars: [Dish] = [
-        .init(id: "id", name: "Erdem Lok", description: "Gördüğü en iyisi", image: "https://picsum.photos/100/200", calories: 21),
-        .init(id: "id2", name: "ad Lok", description: "sda", image: "https://picsum.photos/100/200", calories: 312),
-        .init(id: "id3", name: "eren Lok", description: "baya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisibaya en iyisi", image: "https://picsum.photos/100/200", calories: 321),
+    var categories: [DishCategory] = []
+    var populars: [Dish] = []
     
-    ]
-    
-    var chef: [Dish] = [
-        .init(id: "erd", name: "sad", description: "dsa", image: "https://picsum.photos/100/200", calories: 32),
-        .init(id: "erd", name: "sad", description: "dsa", image: "https://picsum.photos/100/200", calories: 32),
-        .init(id: "erd", name: "sad", description: "dsa", image: "https://picsum.photos/100/200", calories: 32),
-        .init(id: "erd", name: "sad", description: "dsa", image: "https://picsum.photos/100/200", calories: 32)
-    
-    
-    
-    ]
+    var chef: [Dish] = []
+    var isSlideMenuHidden = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+            
+        
         title = "FooDelivery"
+        
+        
         foodCollectionView.delegate = self
         foodCollectionView.dataSource = self
-        
+      
         registerCells()
+        
+        ProgressHUD.show()
+        
+        Networkservice.shared.fetchAllCategories { [weak self ] (result) in
+            switch result {
+            case .success(let allDishes):
+                
+                ProgressHUD.dismiss()
+                self?.categories = allDishes.categories ?? []
+                self?.populars = allDishes.populars ?? []
+                self?.chef = allDishes.specials ?? []
+                self?.foodCollectionView.reloadData()
+                self?.popularCollectionView.reloadData()
+                self?.chefsBestCollection.reloadData()
+                
+            case .failure(let error):
+                ProgressHUD.showError(error.localizedDescription)
+            }
+        }
     }
     
+    @IBAction func sideBarClicked(_ sender: Any) {
+    
+        
+        
+    }
     func registerCells() {
         foodCollectionView.register(UINib(nibName: "CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoryCollectionViewCell")
         popularCollectionView.register(UINib(nibName: "DishDisplayCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DishDisplayCollectionViewCell")
@@ -115,9 +128,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
             controller.dish = collectionView == popularCollectionView ? populars[indexPath.row] : chef[indexPath.row]
             
-            navigationController?.present(controller, animated: true, completion: nil)
+            navigationController?.pushViewController(controller, animated: true)
             
         }
     }
+    
     
 }
