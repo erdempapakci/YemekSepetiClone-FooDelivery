@@ -36,7 +36,6 @@ class SecondMain: UIViewController {
     
     
     }
-    
     func fetch() {
         
         
