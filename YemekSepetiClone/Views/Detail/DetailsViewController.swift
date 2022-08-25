@@ -7,6 +7,7 @@
 
 import UIKit
 import ProgressHUD
+import Firebase
 class DetailsViewController: UIViewController {
     @IBOutlet weak var detailImage: UIImageView!
     
@@ -50,13 +51,47 @@ class DetailsViewController: UIViewController {
         Networkservice.shared.placeOrder(dishId: dish.id ?? "", name: name, email: email) {  (result) in
             switch result {
             case .success(_):
+                
+                if Auth.auth().currentUser == nil {
+                    
+                    print("error")
+                    
+                } else {
+                
+                
                 ProgressHUD.showSuccess("Siparişiniz oluşturuldu.En yakın zamanda sipariş ulaşacaktır.")
+            }
                 
             case .failure(let error):
                 ProgressHUD.showError(error.localizedDescription)
             }
         }
     }
-    
-
+   
+    func usersInfo() {
+        
+        let fireStoreDataBase = Firestore.firestore()
+        let fireStoreReference : DocumentReference?
+        
+        let fireStorePost = ["OrderBy": Auth.auth().currentUser!,
+                             "Food" : dish.name!,
+                             "Adress" : emailTextField.text!
+                             
+        
+        ] as [String : Any]
+        
+        fireStoreReference = fireStoreDataBase.collection("Users").addDocument(data: fireStorePost, completion: { (error) in
+            if error != nil {
+                
+                print("error")
+            } else {
+                
+                
+            }
+        })
+        
+        
+        
+        
+    }
 }

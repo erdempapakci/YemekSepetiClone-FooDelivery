@@ -8,7 +8,7 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
-
+    
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var nextButtonClicked: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -16,42 +16,40 @@ class OnboardingViewController: UIViewController {
     var slides: [onboardingSlide] = []
     
     var currentPage = 0 {
-            didSet {
-                pageControl.currentPage = currentPage
-                if currentPage == slides.count - 1 {
-                    
-                    let button = UIButton(frame: CGRect(x: 132, y: 650, width: 125, height: 50))
-                    button.setTitle("Sign Up", for: .normal)
-                    button.backgroundColor = .systemGreen
-                    view.addSubview(button)
-                    button.layer.cornerRadius = 10
-                    nextButtonClicked.backgroundColor = .systemGreen
-                    nextButtonClicked.setTitle("Sign In", for: .normal)
-                } else {
-                    nextButtonClicked.setTitle("Next", for: .normal)
-                }
+        didSet {
+            pageControl.currentPage = currentPage
+            if currentPage == slides.count - 1 {
+                
+                
+                
+                
+                nextButtonClicked.backgroundColor = .systemGreen
+                nextButtonClicked.setTitle("Lets Begin", for: .normal)
+            } else {
+                nextButtonClicked.setTitle("Next", for: .normal)
             }
         }
+    }
     
     override func viewDidLoad() {
-   
+        
         super.viewDidLoad()
         
         
         collectionView.delegate = self
         collectionView.dataSource = self
         
-       
+        
         slides = [
             onboardingSlide(title: "All kinds of food", description: "Selected dishes from world cuisine", image: UIImage(named: "1")!),
             onboardingSlide(title: "Dishes you can customize", description: "You can choose what your meal includes", image: UIImage(named: "2")!),
-            onboardingSlide(title: "Let's bring it to your location", description: "Your delivery is ready in minutese", image: UIImage(named: "3")!),
-            onboardingSlide(title: "Let's bring it to your location", description: "Your delivery is ready in minutese", image: UIImage(named: "4")!)
-        
+            onboardingSlide(title: "Let's bring it to your location", description: "Your delivery is ready in minutese", image: UIImage(named: "3")!)
+           
+            
         ]
         
         pageControl.numberOfPages = slides.count
-         
+        
     }
     
     @IBAction func nextButtonClicked(_ sender: UIButton) {
@@ -68,10 +66,10 @@ class OnboardingViewController: UIViewController {
             collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
             
         }
-      
+        
     }
     
-
+    
 }
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -92,6 +90,12 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let width = scrollView.frame.width
         currentPage = Int(scrollView.contentOffset.x / width)
-       
+        
+    }
+    func makeAlert() {
+        let alert = UIAlertController(title: "Error", message:" username/password is empty", preferredStyle: UIAlertController.Style.alert)
+        let pop = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+        alert.addAction(pop)
+        present(alert, animated: true)
     }
 }

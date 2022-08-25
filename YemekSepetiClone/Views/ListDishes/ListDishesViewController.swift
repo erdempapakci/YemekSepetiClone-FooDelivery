@@ -8,13 +8,12 @@
 import UIKit
 import ProgressHUD
 class ListDishesViewController: UIViewController {
+   
     @IBOutlet weak var tableView: UITableView!
     
     var category : DishCategory!
     var dishes: [Dish] = []
-    
-  
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         title = category.name

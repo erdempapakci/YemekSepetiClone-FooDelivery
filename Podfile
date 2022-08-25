@@ -9,6 +9,11 @@ target 'YemekSepetiClone' do
 
 pod 'Kingfisher', '~> 7.0'
 pod 'ProgressHUD'
+pod 'Firebase/Analytics'
+pod 'Firebase/Auth'
+pod 'Firebase/Core'
+pod 'Firebase/Firestore'
+pod 'Firebase/Storage'
 
 
   target 'YemekSepetiCloneTests' do

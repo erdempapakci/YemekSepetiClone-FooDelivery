@@ -9,8 +9,6 @@ import UIKit
 
 class DishDisplayCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var caloriesLabel: UILabel!
     @IBOutlet weak var dishImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     override func awakeFromNib() {
@@ -21,8 +19,7 @@ class DishDisplayCollectionViewCell: UICollectionViewCell {
         
         titleLabel.text = dish.name
         dishImageView.kf.setImage(with: dish.image?.asUrl)
-        caloriesLabel.text = dish.formattedCalories
-        descriptionLabel.text = dish.description
+      
         
     }
 }
