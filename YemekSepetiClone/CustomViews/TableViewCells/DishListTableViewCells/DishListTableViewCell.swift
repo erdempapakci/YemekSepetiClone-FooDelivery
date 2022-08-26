@@ -12,9 +12,7 @@ class DishListTableViewCell: UITableViewCell {
     static let identifier = "DishListTableViewCell"
 
     @IBOutlet weak var dishListImageView: UIImageView!
-    
     @IBOutlet weak var dishListTitleLabel: UILabel!
-    
     @IBOutlet weak var dishListDescriptionLabel: UILabel!
 
     func setup(dish: Dish) {
@@ -22,8 +20,7 @@ class DishListTableViewCell: UITableViewCell {
         dishListImageView.kf.setImage(with: dish.image?.asUrl)
         dishListTitleLabel.text = dish.name
         dishListDescriptionLabel.text = dish.description
-        
-        
+       
     }
     func setup(order: Order) {
         dishListImageView.kf.setImage(with: order.dish?.image?.asUrl)
