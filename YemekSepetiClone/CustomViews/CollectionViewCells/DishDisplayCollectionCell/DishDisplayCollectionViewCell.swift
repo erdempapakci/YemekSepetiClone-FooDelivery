@@ -8,18 +8,18 @@
 import UIKit
 
 class DishDisplayCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var dishImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        
     }
     func setup(dish: Dish) {
         
         titleLabel.text = dish.name
         dishImageView.kf.setImage(with: dish.image?.asUrl)
-      
+        
         
     }
 }

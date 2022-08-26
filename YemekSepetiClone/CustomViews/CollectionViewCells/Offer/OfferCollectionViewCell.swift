@@ -6,12 +6,16 @@
 //
 
 import UIKit
-
+import Kingfisher
 class OfferCollectionViewCell: UICollectionViewCell {
-
   
-    
     @IBOutlet weak var imageView: UIImageView!
     
-
+    func setDish(category: DishCategory) {
+        
+        imageView.kf.setImage(with: category.image?.asUrl)
+        
+    }
+    
 }
+
