@@ -3,8 +3,7 @@
  <img src="https://img.shields.io/badge/status-Active-green" height="20">.  <img src="https://img.shields.io/badge/language-Swift-yellow" height="20"> 
 
 
-<img src="https://user-images.githubusercontent.com/73407945/186963408-7511aed8-5802-48e8-8817-165554ee109b.gif" width="300" height="600" /> <img src="https://user-images.githubusercontent.com/73407945/186964512-891c5fea-6ba3-4f12-aea9-4a79eaae92e4.gif" width="300" height="600" />![gif1] <img src="https://user-images.githubusercontent.com/73407945/186964798-6e6c8dfd-d173-4cfc-8c3a-365030944f83.gif" width="300" height="600" />
-
+<img src="https://user-images.githubusercontent.com/73407945/186963408-7511aed8-5802-48e8-8817-165554ee109b.gif" width="300" height="600" /> <img src="https://user-images.githubusercontent.com/73407945/186964512-891c5fea-6ba3-4f12-aea9-4a79eaae92e4.gif" width="300" height="600" />
 # Introduction
 
 YemekSepetiClone-FooDelivery is a delivery app which is used location and user connected to Firebase. 
