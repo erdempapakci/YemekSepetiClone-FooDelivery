@@ -20,9 +20,6 @@ class OnboardingViewController: UIViewController {
             pageControl.currentPage = currentPage
             if currentPage == slides.count - 1 {
                 
-                
-                
-                
                 nextButtonClicked.backgroundColor = .systemGreen
                 nextButtonClicked.setTitle("Lets Begin", for: .normal)
             } else {
@@ -35,16 +32,13 @@ class OnboardingViewController: UIViewController {
         
         super.viewDidLoad()
         
-        
         collectionView.delegate = self
         collectionView.dataSource = self
-        
         
         slides = [
             onboardingSlide(title: "All kinds of food", description: "Selected dishes from world cuisine", image: UIImage(named: "1")!),
             onboardingSlide(title: "Dishes you can customize", description: "You can choose what your meal includes", image: UIImage(named: "2")!),
             onboardingSlide(title: "Let's bring it to your location", description: "Your delivery is ready in minutese", image: UIImage(named: "3")!)
-           
             
         ]
         
@@ -68,7 +62,6 @@ class OnboardingViewController: UIViewController {
         }
         
     }
-    
     
 }
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

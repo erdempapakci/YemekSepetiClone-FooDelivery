@@ -9,21 +9,20 @@ import UIKit
 import ProgressHUD
 
 class OrdersViewController: UIViewController {
-
-    @IBOutlet weak var orderTableView: UITableView!
-   
-    var orders : [Order] = []
     
+    @IBOutlet weak var orderTableView: UITableView!
+    
+    var orders : [Order] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         registerCells()
         title = "Siparişler"
         
         ProgressHUD.show()
         
-        }
+    }
     override func viewDidAppear(_ animated: Bool) {
         Networkservice.shared.fetchOrders { (result) in
             switch result {
@@ -35,7 +34,7 @@ class OrdersViewController: UIViewController {
                 ProgressHUD.showError(error.localizedDescription)
                 
             }
-    }
+        }
         
     }
     
@@ -44,8 +43,7 @@ class OrdersViewController: UIViewController {
         orderTableView.register(UINib(nibName: "DishListTableViewCell", bundle: nil), forCellReuseIdentifier: "DishListTableViewCell")
         
     }
-   
-
+    
 }
 extension OrdersViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -58,10 +56,7 @@ extension OrdersViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setup(order: orders[indexPath.row])
         
         
-        
-        
         return cell
-        
         
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
