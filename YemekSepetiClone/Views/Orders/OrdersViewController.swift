@@ -8,7 +8,7 @@
 import UIKit
 import ProgressHUD
 
-class OrdersViewController: BaseViewController {
+class OrdersViewController: UIViewController {
     
     @IBOutlet weak var orderTableView: UITableView!
     
