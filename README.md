@@ -10,7 +10,7 @@
 
 # Introduction
 
-YemekSepetiClone-FooDelivery is a delivery app which is used location and user connected to Firebase. 
+FooDelivery, a food ordering application inspired by the Yemek Sepeti application, works with Firebase servers. There are descriptions and pictures of the calories of the meals in the application. Users must be registered in order to place an order. 
 
 # Which Pods did I use ?
 
