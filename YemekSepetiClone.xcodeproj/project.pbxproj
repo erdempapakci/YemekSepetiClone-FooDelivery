@@ -15,6 +15,11 @@
 		C3B7FBE628B3B55000ED070D /* AllDishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B7FBE528B3B55000ED070D /* AllDishes.swift */; };
 		C3B8384928B56E3F0020A551 /* SlideOutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B8384828B56E3F0020A551 /* SlideOutTableViewCell.swift */; };
 		C3B8384B28B56FB40020A551 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B8384A28B56FB40020A551 /* Slide.swift */; };
+		C3C1C95428BE3E7C007209CB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C95328BE3E7C007209CB /* BaseViewController.swift */; };
+		C3C1C95728BE3FC0007209CB /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C95628BE3FC0007209CB /* BaseCollectionViewCell.swift */; };
+		C3C1C95C28BE40A7007209CB /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C95B28BE40A7007209CB /* BaseTableViewCell.swift */; };
+		C3D3B73F28BE647B003F5C92 /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D3B73E28BE647B003F5C92 /* SelectorViewController.swift */; };
+		C3D3B74128BE743C003F5C92 /* Sheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D3B74028BE743C003F5C92 /* Sheet.storyboard */; };
 		C3DAAB1C28B22467007D75DF /* DishDisplayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DAAB1A28B22467007D75DF /* DishDisplayCollectionViewCell.swift */; };
 		C3DAAB1D28B22467007D75DF /* DishDisplayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DAAB1B28B22467007D75DF /* DishDisplayCollectionViewCell.xib */; };
 		C3DAAB1F28B22758007D75DF /* DishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DAAB1E28B22758007D75DF /* DishModel.swift */; };
