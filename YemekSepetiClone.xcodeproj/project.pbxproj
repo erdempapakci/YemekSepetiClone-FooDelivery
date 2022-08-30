@@ -15,6 +15,11 @@
 		C3B7FBE628B3B55000ED070D /* AllDishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B7FBE528B3B55000ED070D /* AllDishes.swift */; };
 		C3B8384928B56E3F0020A551 /* SlideOutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B8384828B56E3F0020A551 /* SlideOutTableViewCell.swift */; };
 		C3B8384B28B56FB40020A551 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B8384A28B56FB40020A551 /* Slide.swift */; };
+		C3C1C95428BE3E7C007209CB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C95328BE3E7C007209CB /* BaseViewController.swift */; };
+		C3C1C95728BE3FC0007209CB /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C95628BE3FC0007209CB /* BaseCollectionViewCell.swift */; };
+		C3C1C95C28BE40A7007209CB /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C95B28BE40A7007209CB /* BaseTableViewCell.swift */; };
+		C3D3B73F28BE647B003F5C92 /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D3B73E28BE647B003F5C92 /* SelectorViewController.swift */; };
+		C3D3B74128BE743C003F5C92 /* Sheet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3D3B74028BE743C003F5C92 /* Sheet.storyboard */; };
 		C3DAAB1C28B22467007D75DF /* DishDisplayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DAAB1A28B22467007D75DF /* DishDisplayCollectionViewCell.swift */; };
 		C3DAAB1D28B22467007D75DF /* DishDisplayCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DAAB1B28B22467007D75DF /* DishDisplayCollectionViewCell.xib */; };
 		C3DAAB1F28B22758007D75DF /* DishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DAAB1E28B22758007D75DF /* DishModel.swift */; };
@@ -81,6 +86,11 @@
 		C3B7FBE528B3B55000ED070D /* AllDishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDishes.swift; sourceTree = "<group>"; };
 		C3B8384828B56E3F0020A551 /* SlideOutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutTableViewCell.swift; sourceTree = "<group>"; };
 		C3B8384A28B56FB40020A551 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
+		C3C1C95328BE3E7C007209CB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C3C1C95628BE3FC0007209CB /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		C3C1C95B28BE40A7007209CB /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		C3D3B73E28BE647B003F5C92 /* SelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorViewController.swift; sourceTree = "<group>"; };
+		C3D3B74028BE743C003F5C92 /* Sheet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sheet.storyboard; sourceTree = "<group>"; };
 		C3DAAB1A28B22467007D75DF /* DishDisplayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDisplayCollectionViewCell.swift; sourceTree = "<group>"; };
 		C3DAAB1B28B22467007D75DF /* DishDisplayCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishDisplayCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3DAAB1E28B22758007D75DF /* DishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishModel.swift; sourceTree = "<group>"; };
@@ -191,6 +201,39 @@
 			path = SlideOut;
 			sourceTree = "<group>";
 		};
+		C3C1C95228BE3E49007209CB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C3C1C95328BE3E7C007209CB /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C3C1C95528BE3FAD007209CB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C3C1C95628BE3FC0007209CB /* BaseCollectionViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C3C1C95828BE403B007209CB /* BaseTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3C1C95B28BE40A7007209CB /* BaseTableViewCell.swift */,
+			);
+			path = BaseTableViewCell;
+			sourceTree = "<group>";
+		};
+		C3D3B73D28BE6468003F5C92 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C3D3B73E28BE647B003F5C92 /* SelectorViewController.swift */,
+				C3D3B74028BE743C003F5C92 /* Sheet.storyboard */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		C3DAAB1728B223E5007D75DF /* DishDisplayCollectionCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +254,7 @@
 		C3DAAB2B28B285E2007D75DF /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C3C1C95828BE403B007209CB /* BaseTableViewCell */,
 				C3B8384528B56DA10020A551 /* SlideOut */,
 				C3DAAB2C28B285EE007D75DF /* DishListTableViewCells */,
 			);
@@ -246,8 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				C3DAAB3C28B29C14007D75DF /* NetworkingService.swift */,
-				C3B7FBDF28B3A16B00ED070D /* NetworkError.swift */,
 				C3DAAB3E28B29D3B007D75DF /* Route.swift */,
+				C3B7FBDF28B3A16B00ED070D /* NetworkError.swift */,
 				C3DAAB4028B29DC1007D75DF /* Method.swift */,
 				C3B7FBE128B3A94200ED070D /* ApiResponse.swift */,
 			);
@@ -309,6 +353,8 @@
 		C3DBED1928B0007C00886091 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C3C1C95228BE3E49007209CB /* Base */,
+				C3D3B73D28BE6468003F5C92 /* Auth */,
 				C3E2783328B7C92A00AAAEA8 /* SecondMainVC */,
 				C3DAAB3628B290AF007D75DF /* Orders */,
 				C3DAAB3328B289B1007D75DF /* ListDishes */,
@@ -359,6 +405,7 @@
 		C3DBED2828B04FE000886091 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C3C1C95528BE3FAD007209CB /* Base */,
 				C3AC30AC28B8E6D700A48290 /* SecondMainCategory */,
 				C3E2783F28B8365400AAAEA8 /* Offer */,
 				C3DAAB1728B223E5007D75DF /* DishDisplayCollectionCell */,
@@ -511,6 +558,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3AC30B028B8E70900A48290 /* SecondCategoryCollectionViewCell.xib in Resources */,
+				C3D3B74128BE743C003F5C92 /* Sheet.storyboard in Resources */,
 				C3DAAB1D28B22467007D75DF /* DishDisplayCollectionViewCell.xib in Resources */,
 				C3DAAB3228B28660007D75DF /* DishListTableViewCell.xib in Resources */,
 				C3DBED2D28B0501E00886091 /* CategoryCollectionViewCell.xib in Resources */,
@@ -657,7 +705,9 @@
 				C3DBECEB28AFFE3E00886091 /* SceneDelegate.swift in Sources */,
 				C3B7FBE628B3B55000ED070D /* AllDishes.swift in Sources */,
 				C3DBED3128B0557C00886091 /* String Extensions.swift in Sources */,
+				C3C1C95C28BE40A7007209CB /* BaseTableViewCell.swift in Sources */,
 				C3DAAB4128B29DC1007D75DF /* Method.swift in Sources */,
+				C3C1C95428BE3E7C007209CB /* BaseViewController.swift in Sources */,
 				C3B7FBE028B3A16B00ED070D /* NetworkError.swift in Sources */,
 				C3DBED1D28B0011300886091 /* OnboardingViewController.swift in Sources */,
 				C3DBED2728B0417D00886091 /* HomeViewController.swift in Sources */,
@@ -670,6 +720,8 @@
 				C3DAAB1F28B22758007D75DF /* DishModel.swift in Sources */,
 				C3DBED3428B05B1300886091 /* CardView.swift in Sources */,
 				C3DBED2428B02D8100886091 /* OnboardingCollectionViewCell.swift in Sources */,
+				C3D3B73F28BE647B003F5C92 /* SelectorViewController.swift in Sources */,
+				C3C1C95728BE3FC0007209CB /* BaseCollectionViewCell.swift in Sources */,
 				C3DAAB3528B289DA007D75DF /* ListDishesViewController.swift in Sources */,
 				C3DAAB1C28B22467007D75DF /* DishDisplayCollectionViewCell.swift in Sources */,
 				C3DAAB2928B27E1F007D75DF /* UIViewController.swift in Sources */,

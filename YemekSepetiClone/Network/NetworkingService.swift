@@ -13,19 +13,22 @@ struct Networkservice {
     static let shared = Networkservice()
     
     private init() {}
-    
+  
     func fetchAllCategories(completion: @escaping(Result<AllDishes, Error>) -> Void) {
         request(route: .fetchAllCategories, method: .get, completion: completion)
     }
-    
     
     func fetchOrders(completion: @escaping(Result<[Order], Error>) -> Void) {
         
         request(route: .fetchOrders, method: .get, completion: completion)
         
-        
     }
     
+    func fetchCategoryDishes(categoryId: String, completion: @escaping(Result<[Dish], Error>) -> Void) {
+        
+        request(route: .fetchCategoryDishes(categoryId), method: .get, completion: completion)
+        
+    }
     
     func placeOrder(dishId: String, name: String, email: String, completion: @escaping(Result<Order, Error>) -> Void) {
         let parameters = [
@@ -34,18 +37,9 @@ struct Networkservice {
         
         ]
         request(route: .placeOrder(dishId), method: .post, parameters: parameters, completion: completion)
-        
-        
-        
+       
     }
-    func fetchCategoryDishes(categoryId: String, completion: @escaping(Result<[Dish], Error>) -> Void) {
-        
-        request(route: .fetchCategoryDishes(categoryId), method: .get, completion: completion)
-        
-        
-    }
-    
-    
+  
     func request<T: Decodable>(route: Route,
                     method: Method,
                     parameters: [String : Any]? = nil,
@@ -101,10 +95,9 @@ struct Networkservice {
         
     }
     
-    
     func createRequest(route: Route,
-                               method: Method,
-                               parameters: [String: Any]? = nil) -> URLRequest? {
+                       method: Method,
+                       parameters: [String: Any]? = nil) -> URLRequest? {
         
         let urlString = Route.baseUrl + route.description
         guard let url = urlString.asUrl else { return nil}

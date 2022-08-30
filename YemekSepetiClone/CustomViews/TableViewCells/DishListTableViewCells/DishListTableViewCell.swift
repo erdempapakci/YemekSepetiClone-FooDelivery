@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DishListTableViewCell: UITableViewCell {
+class DishListTableViewCell: BaseTableViewCell {
     
     static let identifier = "DishListTableViewCell"
 

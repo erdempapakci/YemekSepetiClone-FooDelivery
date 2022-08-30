@@ -10,24 +10,20 @@ import ProgressHUD
 import FirebaseAuth
 import Firebase
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
-    @IBOutlet weak var topConstraint: NSLayoutConstraint!
-    @IBOutlet weak var signInButtonClicked: UIButton!
     @IBOutlet weak var containerView: UIStackView!
     @IBOutlet weak var slideOutTableView: UITableView!
-    @IBOutlet weak var authView: UIView!
+   
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var mahalleView: CardView!
     @IBOutlet weak var marketView: CardView!
     @IBOutlet weak var yemekView: CardView!
     @IBOutlet weak var foodCollectionView: UICollectionView!
     @IBOutlet weak var popularCollectionView: UICollectionView!
-    @IBOutlet weak var signUpButtonClicked: UIButton!
-    @IBOutlet weak var usernameText: UITextField!
-    @IBOutlet weak var passwordText: UITextField!
+  
     
-    var isBottomSheetShown = false
+    let bottomSheet = SelectorViewController()
     let screen = UIScreen.main.bounds
     var menu = false
     var home = CGAffineTransform()
@@ -62,9 +58,6 @@ class HomeViewController: UIViewController {
         
         // SlideMenu
         home = containerView.transform
-        
-        
-        topConstraint.constant = 770
         
     }
     
@@ -124,60 +117,12 @@ class HomeViewController: UIViewController {
                 self?.foodCollectionView.reloadData()
                 self?.popularCollectionView.reloadData()
                 
-                
             case .failure(let error):
                 ProgressHUD.showError(error.localizedDescription)
             }
         }
     }
-    
-    @IBAction func signInButtonClicked(_ sender: Any) {
-        if usernameText.text != "" && passwordText.text != "" {
-            
-            Auth.auth().signIn(withEmail: usernameText.text!, password: passwordText.text!) { (authdata, error) in
-                if error != nil {
-                    self.makeAlert(titleInput: "erro", messageInput: error?.localizedDescription ?? "rr")
-                    
-                } else {
-                    self.makeAlert(titleInput: "", messageInput: "Başarıyla giriş yaptınız")
-                    self.topConstraint.constant = 770
-                    self.view.sendSubviewToBack(self.authView)
-                    
-                }
-            }
-            
-        } else {
-            
-            makeAlert(titleInput: "Hata", messageInput: "Email / şifre eksik")
-            
-        }
-        
-    }
-    
-    @IBAction func signUpButtonClicked(_ sender: Any) {
-        
-        if usernameText.text != "" && passwordText.text != "" {
-            
-            Auth.auth().createUser(withEmail: usernameText.text!, password: passwordText.text!) { (authdata, error) in
-                if error != nil {
-                    self.makeAlert(titleInput: "erro", messageInput: error?.localizedDescription ?? "rr")
-                    
-                    
-                } else {
-                    self.makeAlert(titleInput: "Başarılı", messageInput: "Hesabınız oluşturuldu")
-                    self.topConstraint.constant = 770
-                    self.view.sendSubviewToBack(self.authView)
-                    
-                }
-            }
-            
-        } else {
-            
-            makeAlert(titleInput: "Hata", messageInput: "Email / şifre eksik")
-            
-        }
-        
-    }
+
     func makeAlert(titleInput: String, messageInput: String ) {
         
         let controller = UIAlertController(title: titleInput, message: messageInput, preferredStyle: .alert)
@@ -197,7 +142,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             
         case popularCollectionView:
             return populars.count
-          
+            
         default: return 0
             
         }
@@ -207,7 +152,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView {
         case foodCollectionView:
-      
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! CategoryCollectionViewCell
             cell.setDish(category: categories[indexPath.row])
             return cell
@@ -216,7 +161,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DishDisplayCollectionViewCell", for: indexPath) as! DishDisplayCollectionViewCell
             cell.setup(dish: populars[indexPath.row])
             return cell
-          
+            
         default: return UICollectionViewCell()
             
         }
@@ -250,6 +195,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         performSegue(withIdentifier: "toGet", sender: nil)
         
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is SecondMain {
+            let vc = segue.destination as? SecondMain
+            vc?.categories = categories
+        }
+    }
     
 }
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -269,16 +220,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         UIView.animate(withDuration: 0.7, animations: {
-                    
-                    self.containerView.transform = self.home
-                    self.containerView.layer.cornerRadius = 0
-                    
-                    self.menu = false
-                    self.view.sendSubviewToBack(self.slideOutTableView)
-                    
-                    self.topConstraint.constant = 400
-                    self.view.bringSubviewToFront(self.authView)
-                })
+            
+            self.containerView.transform = self.home
+            self.containerView.layer.cornerRadius = 0
+            self.menu = false
+            self.view.sendSubviewToBack(self.slideOutTableView)
+            
+        })
+        
+        let storyboard = UIStoryboard(name: "Sheet", bundle: nil)
+        let sheetPresentationViewController = storyboard.instantiateViewController(withIdentifier: "SelectorViewController") as! SelectorViewController
+        self.present(sheetPresentationViewController, animated: true)
         
     }
 }

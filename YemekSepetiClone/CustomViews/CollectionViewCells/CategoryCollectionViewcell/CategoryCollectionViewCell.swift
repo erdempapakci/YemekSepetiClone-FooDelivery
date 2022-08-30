@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class CategoryCollectionViewCell: UICollectionViewCell {
+class CategoryCollectionViewCell: BaseCollectionViewCell {
 
     @IBOutlet weak var categoryTitleLabel: UILabel!
     @IBOutlet weak var categoryImageView: UIImageView!

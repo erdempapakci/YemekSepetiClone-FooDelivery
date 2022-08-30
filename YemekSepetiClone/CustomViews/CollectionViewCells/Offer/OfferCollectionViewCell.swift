@@ -7,7 +7,7 @@
 
 import UIKit
 import Kingfisher
-class OfferCollectionViewCell: UICollectionViewCell {
+class OfferCollectionViewCell: BaseCollectionViewCell {
   
     @IBOutlet weak var imageView: UIImageView!
     

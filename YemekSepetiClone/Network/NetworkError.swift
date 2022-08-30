@@ -20,7 +20,6 @@ enum AppError: LocalizedError {
     var errorDescription: String? {
 
         switch self {
-            
         case .ErrorDecoding:
             return "Response could not decoded"
         case .unknownError:

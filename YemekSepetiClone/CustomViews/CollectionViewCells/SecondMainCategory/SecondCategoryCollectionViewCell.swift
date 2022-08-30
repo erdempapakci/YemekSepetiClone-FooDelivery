@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondCategoryCollectionViewCell: UICollectionViewCell {
+class SecondCategoryCollectionViewCell: BaseCollectionViewCell {
 
 
     @IBOutlet weak var categoryImageView: UIImageView!

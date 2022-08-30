@@ -7,18 +7,22 @@
 
 import UIKit
 import ProgressHUD
-class ListDishesViewController: UIViewController {
-   
+class ListDishesViewController: BaseViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     
     var category : DishCategory!
     var dishes: [Dish] = []
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = category.name
         registerCell()
         ProgressHUD.show()
+        fetch()
+    }
+    
+    func fetch() {
         Networkservice.shared.fetchCategoryDishes(categoryId: category.id ?? "") { [weak self] (result) in
             switch result {
             case .success(let dishes):
@@ -27,18 +31,17 @@ class ListDishesViewController: UIViewController {
                 self?.tableView.reloadData()
             case .failure(let error):
                 ProgressHUD.showError(error.localizedDescription)
-            
+                
             }
         }
+        
     }
     
     func registerCell() {
         tableView.register(UINib(nibName: "DishListTableViewCell", bundle: nil), forCellReuseIdentifier: "DishListTableViewCell")
         
-        
     }
-  
-
+    
 }
 extension ListDishesViewController: UITableViewDelegate, UITableViewDataSource {
     

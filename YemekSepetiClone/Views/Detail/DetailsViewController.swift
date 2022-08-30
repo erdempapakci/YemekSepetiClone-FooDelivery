@@ -8,7 +8,7 @@
 import UIKit
 import ProgressHUD
 import Firebase
-class DetailsViewController: UIViewController {
+class DetailsViewController: BaseViewController {
     
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var emailTextField: UITextField!
@@ -43,7 +43,7 @@ class DetailsViewController: UIViewController {
             
             ProgressHUD.showError("Lütfen isim/email giriniz ")
             return
-        
+            
         }
         ProgressHUD.show("Placing Order...")
         Networkservice.shared.placeOrder(dishId: dish.id ?? "", name: name, email: email) {  (result) in
@@ -54,7 +54,6 @@ class DetailsViewController: UIViewController {
                     
                     print("error")
                     ProgressHUD.showError("Lütfen giriş yapınız")
-                    
                     
                 } else {
                     

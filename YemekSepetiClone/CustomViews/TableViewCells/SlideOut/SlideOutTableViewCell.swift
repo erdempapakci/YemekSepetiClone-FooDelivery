@@ -8,7 +8,7 @@
 import UIKit
 
 
-class SlideOutTableViewCell: UITableViewCell {
+class SlideOutTableViewCell: BaseTableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     override func awakeFromNib() {

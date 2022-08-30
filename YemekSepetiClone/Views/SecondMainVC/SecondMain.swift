@@ -7,8 +7,8 @@
 
 import UIKit
 import ProgressHUD
-class SecondMain: UIViewController {
-
+class SecondMain: BaseViewController {
+    
     @IBOutlet weak var topCategoryCollectionView: UICollectionView!
     @IBOutlet weak var OffersCollectionView: UICollectionView!
     
@@ -18,47 +18,25 @@ class SecondMain: UIViewController {
                   UIImage(named: "offer"),
                   UIImage(named: "offer")
     ]
- 
-   override func viewDidLoad() {
-        super.viewDidLoad()
-       title = "FooDelivery"
-      
-       topCategoryCollectionView.delegate = self
-       topCategoryCollectionView.dataSource = self
-       OffersCollectionView.delegate = self
-       OffersCollectionView.dataSource = self
-       
-       
-       fetch()
-       registerCells()
     
-   }
-       
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "FooDelivery"
+        
+        topCategoryCollectionView.delegate = self
+        topCategoryCollectionView.dataSource = self
+        OffersCollectionView.delegate = self
+        OffersCollectionView.dataSource = self
+        registerCells()
+        
+    }
+    
     func registerCells() {
         topCategoryCollectionView.register(UINib(nibName: "CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoryCollectionViewCell")
         OffersCollectionView.register(UINib(nibName: "OfferCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "OfferCollectionViewCell")
         
-    
-    
-    }
-    func fetch() {
-        
-        Networkservice.shared.fetchAllCategories { [weak self ] (result) in
-            switch result {
-            case .success(let allDishes):
-                
-               
-                self?.categories = allDishes.categories ?? []
-                self?.topCategoryCollectionView.reloadData()
-                self?.OffersCollectionView.reloadData()
-              
-            case .failure(let error):
-                ProgressHUD.showError(error.localizedDescription)
-            }
-        }
     }
     
-
 }
 
 extension SecondMain: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -66,33 +44,31 @@ extension SecondMain: UICollectionViewDelegate, UICollectionViewDataSource {
         switch collectionView {
         case topCategoryCollectionView:
             return categories.count
-        
-     
+            
         case OffersCollectionView:
             return images.count
             
         default:
-           return 0
+            return 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView {
         case topCategoryCollectionView:
-           
+            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! CategoryCollectionViewCell
             cell.setDish(category: categories[indexPath.row])
             return cell
-        
+            
         case OffersCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OfferCollectionViewCell", for: indexPath) as! OfferCollectionViewCell
             cell.imageView.image = images[indexPath.row]
             return cell
-        
+            
         default: return UICollectionViewCell()
-      
+            
+        }
     }
-}
-
-
+    
 }
