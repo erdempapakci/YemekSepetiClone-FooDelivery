@@ -1,9 +1,13 @@
 # YemekSepetiClone-FooDelivery
 
- <img src="https://img.shields.io/badge/status-Active-green" height="20">.  <img src="https://img.shields.io/badge/language-Swift-yellow" height="20"> 
 
 
-<img src="https://user-images.githubusercontent.com/73407945/186963408-7511aed8-5802-48e8-8817-165554ee109b.gif" width="300" height="600" /> <img src="https://user-images.githubusercontent.com/73407945/186964512-891c5fea-6ba3-4f12-aea9-4a79eaae92e4.gif" width="300" height="600" />
+
+
+<img src="https://user-images.githubusercontent.com/73407945/187550716-945280b5-0f3e-4cf2-90d7-cffa49308281.gif" width="200" height="400" /><img src="https://user-images.githubusercontent.com/73407945/187552446-bb6b0678-6938-4ccf-a87f-4ca9c1a55a29.png" width="200" height="400" /> <img src="https://user-images.githubusercontent.com/73407945/187550821-349bc406-7795-46bf-80ad-f3593e17900d.gif" width="200" height="400" /><img src="https://user-images.githubusercontent.com/73407945/187552475-3ae33c4d-9bc0-47ce-b145-a79bd9ec4351.png" width="200" height="400" /> <img src="https://user-images.githubusercontent.com/73407945/187550832-7c701cf2-1a2e-4f0d-a738-90d5b47f8aed.gif" width="200" height="400" />
+
+
+
 # Introduction
 
 YemekSepetiClone-FooDelivery is a delivery app which is used location and user connected to Firebase. 
@@ -115,5 +119,4 @@ class CardView: UIView {
 
  ```
 
-<img src="https://user-images.githubusercontent.com/73407945/186971428-3aaebe4d-1a2d-4e44-817a-ff3ecd3dfc5e.png" width="200" height="400" />.         <img src="https://user-images.githubusercontent.com/73407945/186971470-839dd094-f419-45c4-88be-1b64b0f4c0e8.png" width="200" height="400" />.    <img src="https://user-images.githubusercontent.com/73407945/186971457-d1af0f1d-aa22-48e9-9f1b-73b403f9aed9.png" width="200" height="400" />
 
